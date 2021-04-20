@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import ReactDOM from "react-dom";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import "bootstrap-css-only/css/bootstrap.min.css";
@@ -18,11 +18,8 @@ import {
 } from "mdbreact";
 import "./index.css";
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      events: [
+const App = (props) => {
+    [events, setEvents] = useState([
         {
           id: 1,
           time: "10:00",
@@ -45,11 +42,8 @@ class App extends Component {
           description:
             "Project evalutation ile declaring a variable and using an if statement is a fine way to conditionally render a component, sometimes you might want to use a"
         }
-      ]
-    };
-  }
+      ]);
 
-  render() {
     return (
       <React.Fragment>
         <MDBContainer>
@@ -106,11 +100,9 @@ class App extends Component {
         </MDBContainer>
       </React.Fragment>
     );
-  }
 }
 
-class Event extends Component {
-  render() {
+const Event = (props) => {
     return (
       <React.Fragment>
         <div className="media mt-1">
@@ -140,6 +132,6 @@ class Event extends Component {
       </React.Fragment>
     );
   }
-}
 
+  
 ReactDOM.render(<App />, document.getElementById("root"));
