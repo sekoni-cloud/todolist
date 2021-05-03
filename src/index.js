@@ -1,12 +1,13 @@
 import React, { Component, useState } from "react";
 import ReactDOM from "react-dom";
+import $ from 'jquery';
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap/dist/js/bootstrap"
 import {Thermometer, Sun, ArrowRight, Clock} from "react-bootstrap-icons"
 import { Button, Image, Form, InputGroup, FormGroup, FormText, FormLabel, FormControl, FormCheck,  ModalBody,  ModalFooter,  Badge, Container, Row, Col} from "react-bootstrap";
 import Modal from "react-bootstrap/Modal";
-import "./index.css";
 
+import "./index.css";
 class App extends Component{
     constructor(props){
         super(props);
@@ -18,24 +19,23 @@ class App extends Component{
                 id: 1,
                 time: "10:00",
                 title: "Breakfast with Simon",
-                location: "Allonze Restaurant",
-                description: "Disscus web development"
+                location: "Lounge Caffe",
+                description: "Discuss Q3 targets"
             },
             {
                 id: 2,
                 time: "10:30",
-                title: "Meeting with Corey!",
-                location: "Google Meets",
-                descriptipn: "Solving some leet problems"
+                title: "Daily Standup Meeting (recurring)",
+                location: "Warsaw Spire Office"
             },
             { id: 3, time: "11:00", title: "Call with HRs" },
             {
                 id: 4,
                 time: "12:00",
-                title: "Lunch with Salvador",
-                location: "Moremi Garden Park",
+                title: "Lunch with Timmoty",
+                location: "Canteen",
                 description:
-                "Project evalutation, a merge sort is faster than a linear sort because a merge sort has a nlogn complexity while a linear has  n complexity"
+                "Project evalutation ile declaring a variable and using an if statement is a fine way to conditionally render a component, sometimes you might want to use a"
             }
            ] 
         };
@@ -50,7 +50,7 @@ class App extends Component{
             [event.target.name] : event.target.value
         });
     };
-    handleClose = ()=> {
+    handleClose=()=> {
         this.setState({
             show: false
         });
@@ -131,7 +131,7 @@ class App extends Component{
                         </Row>
                     </h1>
                     <p>
-                    Don't forget your sunglasses. Today will dry and sunny, becoming
+                    Don't forget your sunglasses. Today will be dry and sunny, becoming
                     warm in the afternoon with temperatures of between 20 and 25
                     degrees.
                     </p>
@@ -145,7 +145,7 @@ class App extends Component{
            <Modal.Header closeButton>
                <Modal.Title className="justify-content-center"> Add new Event</Modal.Title>
            </Modal.Header>
-           <Modal.Body>Heyyyy! What are the plans for today.....And have a nice day ahead!
+           <Modal.Body>Whoooo, we have come all the way to here! Until we succeed we'll never stop trying
                <Form.Group className="mx-3 grey-text" onSubmit= {this.handleInputChange}>
                    <hr style={{color: "black", borderColor: "grey"}}/>
                    <Container>
