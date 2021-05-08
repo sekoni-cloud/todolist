@@ -1,7 +1,11 @@
+// Main git commands to memorize:
+1) git add .
+2) git commit -m "some message describing commit"
+3) git push
+4) git pull
 
 
-
-main ------>-----------------------main----->
+main ------>------------------main----->
   |                                /
  branch1 ------->--branch1------>--
     |              /
