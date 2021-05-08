@@ -12,9 +12,17 @@
 
 main ------>------------------main----->
   |                                /
- branch1 ------->--branch1------>--
+ branch1(you)------->--branch1------>--
     |              /
   branchNew------->
+
+
+
+branch1(on github)-------->commit1--------->(error)----------------------------------------------------------->commit2--->
+
+branch1(you) -------> push commit1 ----> 
+
+branch1(person1) ------>-------------------> push commit2(error, they have to pull first) --- pull commit1----> push commit2 
 
  
 
