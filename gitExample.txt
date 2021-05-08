@@ -4,6 +4,11 @@
 3) git push
 4) git pull
 
+// Making a new branch:
+1) git branch task-240/some-feature-title
+2) git checkout task-240/some-feature-title
+3) (shortcut) git checkout -b task-240/some-feature-title
+
 
 main ------>------------------main----->
   |                                /
